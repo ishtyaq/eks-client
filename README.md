@@ -14,3 +14,12 @@ Simple client for working with ElasticSearch on K8S on local machine
 
 ### How Java Client works
 This is a command line project that allows you to add new text to an Elasticsearch database. The program has three options: Input, Search, and Exit. You can change the Elasticsearch server and URL from the properties file.
+
+#### **Console Client**
+![My Console Client](./docs/console-client.png)
+
+#### **My Local Kibana**
+![My Kibana Client](./docs/kibana-local.png)
+
+### **K8S Setup**
+![My K8S Setup](./docs/K8S-setup.png)

@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+/**
+ * elasticsearch client API to read & search data from INDEX_NAME.
+ */
 public class SearchClient {
     // key: log
     private  final String INDEX_NAME1 = "logstash-2023.02.22";
@@ -25,6 +28,11 @@ public class SearchClient {
         this.client =  new RestHighLevelClient(
                 RestClient.builder(new HttpHost(bundle.getString("elasticsearch.server"), Integer.parseInt(bundle.getString("elasticsearch.port")), "http")));
     }
+
+    /**
+     * @param searchText : input to find in the ElasticSearch. Basic Search.
+     * @throws IOException
+     */
     public void SearchText(String searchText) throws IOException {
 
        // Create search request
@@ -44,6 +52,10 @@ public class SearchClient {
 
     }
 
+    /**
+     * @param inputText : New text to add in the ElasticSearch DB
+     * @throws IOException
+     */
     public void AddText(String inputText) throws IOException {
 
 
